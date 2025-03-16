@@ -3,7 +3,7 @@
  * Plugin Name: CrawlFence Anti-Bot
  * Description: Intègre l'API CrawlFence pour protéger votre site contre les bots malveillants.
  * Version: 1.0
- * Author: Votre Nom
+ * Author: Julien DD
  * License: GPL2
  */
 
@@ -19,7 +19,7 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/class-crawlfence-api.php';
 add_action( 'init', 'crawlfence_check_access' );
 
 function crawlfence_check_access() {
-    // Récupérer la clé API depuis les options (à configurer à l'étape suivante)
+    // Récupérer la clé API depuis les options
     $api_key = get_option( 'crawlfence_api_key', '' );
 
     if ( empty( $api_key ) ) {
